@@ -7,6 +7,94 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     </head>
+    	<style>
+    body {
+        font-family: 'Montserrat';
+    }
+		.ar-cont {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			/*overflow: hidden;*/
+		}
+
+		.ar-nav {
+			z-index: 2;
+			width: 100%;
+			height: auto;
+			/*background-color: #1b4e0f;*/
+		}
+        .item-title{
+            text-align: center;
+            color: #FEBE10;
+            margin: 0;
+            padding: 5px;
+            background-color: #ffffff90;
+        }
+		.ar-footer {
+            position: absolute;
+            bottom: 0;
+			z-index: 2;
+			width: 100%;
+			height: auto;
+			/*background-color: #1b4e0f;*/
+		}
+
+		.ar-content-box {
+			z-index: 2;
+			display: flex;
+            margin: 5px;
+		}
+        
+		.ar-content {
+			z-index: 2;
+			width: 50%;
+            height: auto;
+			margin: 2px;
+			padding: 1%;
+			color: #000;
+			background-color: #ffffff90;
+			border-radius: 30px;
+			font-size: 16px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+        .ar-content h3, .ar-content p {
+            margin: 0;
+            text-align: center;
+            color: #1b4e0f;
+        }
+        
+		/*.ar-content-filler {
+			z-index: 2;
+			width: 80%;
+			margin: 2%;
+			padding: 1%;
+		}
+
+		.ar-content h1 {
+			font-size: 40px;
+			font-weight: 700;
+		}*/
+        @media screen and (max-width: 768px) {
+            .ar-content-box {
+			    display: block;
+                margin: auto;
+                padding: 0;
+		    }
+            .ar-content {
+                display: block;
+                width: 100%;
+                margin: auto;
+			    padding: 0px;
+                border-radius: 0px;
+            }
+        }
+	</style>
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
@@ -47,5 +135,31 @@
 
             <a-entity camera></a-entity>
         </a-scene>
+        <div class="ar-cont">
+			<div class="ar-nav">
+				<!--x-navbar /-->
+                <h3 class="item-title">ICED CARAMEL MACCHIATO</h3>
+			</div>
+			
+			<div class="ar-footer">
+				<!--x-navbar /-->
+                <div class="ar-content-box">
+                    <div class="ar-content">
+                        <!-- Ingredients -->
+                        <h3>INGREDIENTS</h3>
+                        <p style="padding-bottom: 5px;">2 Espresso Shot, Milk, and Cinnamon Powder</p>
+                        <!-- Description -->
+                        <h3>DESCRIPTION</h3>
+                        <p>From Italy to Cafe Silangan, this Italian coffee drink that is traditionally prepared with equalparts of espresso, steamed milk, and steamed milk foam on top.</p>
+                    </div>
+                    <div class="ar-content">
+                        <h3>HISTORY</h3>
+                        <p>
+                           The Caramel Macchiato debuted in the fall of 1996, back when Starbucks had around 1,000 stores. Hannah Su, a 21-year partner (employee) who developed the iconic drink, said they wanted to create something special to mark Starbucks 25th anniversary.
+                        </p>
+                    </div>
+			    </div>
+			</div>
+		</div>
     </body>
 </html>
